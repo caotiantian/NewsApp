@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer"
+    android:layout_height="match_parent"
+    tools:context="com.bawei.newsapp.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/holo_red_dark" >
+
+            <ImageView
+                android:id="@+id/leftmenu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@drawable/menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:text="今日热搜" />
+
+            <ImageView
+                android:id="@+id/rightmenu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:padding="12dp"
+                android:src="@drawable/p_center" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_bar"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:id="@+id/frm"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                />
+
+            <RadioGroup
+                android:id="@+id/group"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+
+                >
+                <RadioButton
+                    android:id="@+id/btn1"
+                    android:layout_width="0dp"
+                    android:checked="true"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:padding="10sp"
+                    android:textColor="@drawable/fontcolor"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/home1"
+                    android:text="首页"
+                    />
+                <RadioButton
+                    android:id="@+id/btn2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textColor="@drawable/fontcolor"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:drawableTop="@drawable/govaffair1"
+                    android:text="排行榜"
+                    />
+                <RadioButton
+                    android:id="@+id/btn3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textColor="@drawable/fontcolor"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:drawableTop="@drawable/newscenter1"
+                    android:text="微头条"
+                    />
+                <RadioButton
+                    android:id="@+id/btn4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:drawableTop="@drawable/smartservice1"
+                    android:textColor="@drawable/fontcolor"
+                    android:text="鲜图汇"
+                    />
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/left"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@android:color/white" >
+
+        <LinearLayout
+            android:id="@+id/lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:layout_marginLeft="20sp"
+            android:orientation="horizontal"
+            >
+            <ImageButton
+                android:id="@+id/imgbtn1"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:src="@drawable/ic_drawer_qzone"
+
+                />
+            <ImageButton
+                android:id="@+id/imgbtn2"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/ic_drawer_tencent"
+
+                />
+            <ImageButton
+                android:id="@+id/imgbtn3"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/ic_drawer_weibo"
+
+                />
+
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay"
+            android:textSize="12sp"
+            android:layout_marginTop="8sp"
+            android:layout_marginLeft="20sp"
+            android:gravity="center"
+            android:text="登陆后，将推荐给你更多感兴趣的文章"
+            />
+
+        <ListView
+            android:id="@+id/left_listview"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv"
+            android:layout_marginTop="20sp"
+            android:layout_height="500sp" >
+        </ListView>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>
